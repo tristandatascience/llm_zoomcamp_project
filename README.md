@@ -15,7 +15,6 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
 - Docker
 - Docker Compose
 - Python
-- For local LLM hosting with Ollama: Ollama installed and running
 
 ## Installation and Setup
 
