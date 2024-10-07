@@ -37,7 +37,7 @@ Open your browser and go to `http://localhost:8501`
 ## Usage
 
 1. In the user interface, use the "Upload PDF" tab to upload your documents.
-2. Switch to the "Chat" tab to start asking questions about your document content.
+2. Switch to the "Chat" tab to start asking questions about your document content and let a feedback.
 3. You can view feedback statistics in the "Feedback and Statistics" tab.
 
 ## Configuration
