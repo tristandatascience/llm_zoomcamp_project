@@ -14,6 +14,7 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
 
 - Docker
 - Docker Compose
+- Python
 
 ## Installation and Setup
 
