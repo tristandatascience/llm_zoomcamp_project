@@ -1,6 +1,6 @@
 # llm_zoomcamp_project
 
-This project implements a Retrieval-Augmented Generation (RAG) system that allows querying PDF or text documents using a Large Language Model (LLM) such as LLaMA or Wizard LM hosted on DeepInfra, Groq, or locally using Ollama.
+This project implements a Retrieval-Augmented Generation (RAG) system that allows querying PDF or text documents using a Large Language Model (LLM) such as LLaMA hosted on DeepInfra, Groq, or locally using LLaMA with Ollama.
 
 ## Features
 
