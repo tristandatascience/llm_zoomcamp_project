@@ -20,20 +20,20 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
 
 1. Clone this repository:
 
-git clone https://github.com/your-username/rag-chatbot.git
-cd rag-chatbot
+  git clone https://github.com/your-username/rag-chatbot.git
+  cd rag-chatbot
 
 
 2. Build Docker images:
 
-docker-compose build
+  docker-compose build
 
 3. Start the containers:
 
-docker-compose up -d
+  docker-compose up -d
 
 4. Access the user interface:
-Open your browser and go to `http://localhost:8501`
+  Open your browser and go to `http://localhost:8501`
 
 ## Usage
 
