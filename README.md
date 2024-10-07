@@ -20,21 +20,21 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
 
 1. Clone this repository:
 
-        `git clone https://github.com/tristandatascience/llm_zoomcamp_project.git`
+        git clone https://github.com/tristandatascience/llm_zoomcamp_project.git
         
-        `cd llm_zoomcamp_project-main`
+        cd llm_zoomcamp_project-main
 
 2. Make the entrypoint script for Ollama executable:
 
-        `chmod +x frontend/entrypoint.sh`
+        chmod +x frontend/entrypoint.sh
 
 3. Build Docker images:
 
-        `docker-compose build`
+        docker-compose build
 
 4. Start the containers:
 
-        `docker-compose up -d`
+        docker-compose up -d
 
 5. Access the user interface:
         Open your browser and go to `http://localhost:8501`
