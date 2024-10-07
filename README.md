@@ -25,10 +25,10 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
   `cd llm_zoomcamp_project-main`
 
 2. Make the entrypoint script for Ollama executable:
-3. 
+
   `chmod +x frontend/entrypoint.sh`
 
-4. Build Docker images:
+3. Build Docker images:
 
   `docker-compose build`
 
