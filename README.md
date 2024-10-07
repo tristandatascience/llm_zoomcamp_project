@@ -20,9 +20,9 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
 
 1. Clone this repository:
 
-  `git clone https://github.com/tristandatascience/llm_zoomcamp_project.git`
-  
-  `cd llm_zoomcamp_project-main`
+        `git clone https://github.com/tristandatascience/llm_zoomcamp_project.git`
+        
+        `cd llm_zoomcamp_project-main`
 
 2. Make the entrypoint script for Ollama executable:
 
