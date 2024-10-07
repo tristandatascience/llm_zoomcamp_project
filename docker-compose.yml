@@ -1,0 +1,49 @@
+version: "3.10"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./colab_data:/app/colab_data
+      - ./chroma_db:/app/chroma_db
+    environment:
+      - DEEPINFRA_API_KEY=sH7RYYNkSPBMi4D4dW40D3wdumb
+      - GROQ_API_KEY=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
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+      - ollama # Add ollama dependency
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501"]  # Add healthcheck for frontend
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+      - ./entrypoint.sh:/entrypoint.sh
+    tty: true
+    restart: always
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  ollama_data:
