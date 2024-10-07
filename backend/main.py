@@ -37,7 +37,7 @@ def initialize_llm(provider: str, api_key: str):
     elif provider == "Groq":
         llm = Groq(model="llama3-8b-8192", api_key=api_key)
     elif provider == "Ollama llama3.2:1b (Default)":
-        llm = Ollama(model="llama3.2:1b", base_url="http://ollama:11434")   
+        llm = Ollama(model="llama3.2:1b", request_timeout=250.0 ,base_url="http://ollama:11434")   
     else:
         raise ValueError("Invalid LLM provider")
     Settings.llm = llm
