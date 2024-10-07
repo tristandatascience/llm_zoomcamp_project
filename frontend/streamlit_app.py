@@ -154,7 +154,7 @@ def query_backend(user_input):
         return {"error": f"Error querying the backend: {response.status_code}"}
 
 # Create sidebar menu
-menu = [ "Set LLM", "Chat", "Upload PDF", "Feedback and Statistics"]
+menu = [ "Set LLM", "Upload PDF", "Chat", "Feedback and Statistics"]
 choice = st.sidebar.selectbox("Menu", menu)
 
 if choice == "Chat":
@@ -231,7 +231,10 @@ elif choice == "Set LLM":
         # Here you would typically save these settings to a configuration file or database
         # For this example, we'll just store them in session state
         st.session_state['llm_provider'] = llm_provider
-        st.session_state['api_key'] = api_key
+        if llm_provider != "Ollama llama3.2:1b (Default)":
+            st.session_state['api_key'] = api_key
+        else:
+            st.session_state['api_key'] = "nokey"
         
         # Send settings to backend
         response = requests.post(f"{backend_url}/update_llm_settings", 
