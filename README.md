@@ -44,9 +44,10 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
 
 ## Usage
 
-1. In the user interface, use the "Upload PDF" tab to upload your documents.
-2. Switch to the "Chat" tab to start asking questions about your document content and leave feedback.
-3. You can view feedback statistics in the "Feedback and Statistics" tab.
+1. In the menu interface "Set LLM", set your LLM.
+2. In the menu interface "Upload PDF" upload your documents.
+3. In the menu interface "Chat" tab to start asking questions about your document content and leave feedback.
+4. You can view feedback statistics in the "Feedback and Statistics" tab.
 
 ## Configuration
 
