@@ -20,7 +20,6 @@ This project implements a Retrieval-Augmented Generation (RAG) system that allow
 
 1. Clone this repository:
 
-```bash
 git clone https://github.com/your-username/rag-chatbot.git
 cd rag-chatbot
 
