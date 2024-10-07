@@ -42,7 +42,7 @@ Open your browser and go to `http://localhost:8501`
 
 ## Configuration
 
-The project uses environment variables for configuration. You can modify them in the `.env` file at the root of the project.
+The project uses environment variables for configuration. You can modify them in the docker-compose.yml (API key for llm)
 
 ## Contributing
 
