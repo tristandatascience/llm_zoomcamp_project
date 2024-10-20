@@ -216,29 +216,25 @@ elif choice == "Feedback and Statistics":
 
 elif choice == "Set LLM":
     st.title("LLM Settings")
-    
+    api_key_ = ''
     # LLM Provider selection
     llm_provider = st.radio(
         "Select LLM provider (llama 3.1:8b for Groq and DeepInfra. Notes: Groq api is free see https://groq.com/) or local LLM with Ollama (local LLM no API/Tokens/Provider needed)",
         ("Ollama llama3.2:1b (Default)","Groq", "DeepInfra")
     )
-    
-    # API Key input
+    st.session_state['llm_provider'] = llm_provider
     if llm_provider != "Ollama llama3.2:1b (Default)":
-        api_key = st.text_input("Enter API Key", type="password")
+        api_key_ = st.text_input("Enter API Key", type="password")
+        st.session_state['api_key'] = api_key_
+    else:
+        api_key_ = str("nokey")
     
     if st.button("Save Settings"):
         # Here you would typically save these settings to a configuration file or database
         # For this example, we'll just store them in session state
-        st.session_state['llm_provider'] = llm_provider
-        if llm_provider != "Ollama llama3.2:1b (Default)":
-            st.session_state['api_key'] = api_key
-        else:
-            st.session_state['api_key'] = "nokey"
-        
-        # Send settings to backend
+        llm_provider_str = str(llm_provider)
         response = requests.post(f"{backend_url}/update_llm_settings", 
-                                 json={"provider": llm_provider, "api_key": api_key})
+                                 json={"provider": llm_provider, "api_key": api_key_})
         
         if response.status_code == 200:
             st.success("Settings saved successfully!")
